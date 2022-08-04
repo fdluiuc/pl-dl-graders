@@ -1,5 +1,5 @@
-# Borrow the leg work done by the PrairieLearn project
-FROM prairielearn/grader-python:latest
+# Borrow the leg work from the advanced python image built ontop of the PrairieLearn grader
+FROM jamesbalamuta/grader-adv-python:latest
 
 # Set a new label for the image
 LABEL org.label-schema.license="AGPL-3.0" \
