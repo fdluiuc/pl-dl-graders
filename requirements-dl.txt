@@ -4,3 +4,9 @@ torchvision==0.13.0
 torchaudio==0.12.0
 tensorflow==2.9.1; platform_machine == "x86_64"
 tensorflow-aarch64==2.9.1; platform_machine == "aarch64"
+# Werkzeug (required by tensorboard) wants Markupsafe 2.1.1.
+# However, 2.0.1 is required by the older Jupyter that PL's upstream image still uses.
+# As a temporary hack, we downgrade markupsafe to keep Jupyter happy.
+# Once the PL upstream image is renovated, this will hopefully not be necessary.
+# This edit mirrors the one made at: https://github.com/stat-prairielearn-uiuc/workspace-dl-jupyterlab/blob/main/requirements-dl.txt
+markupsafe==2.0.1
